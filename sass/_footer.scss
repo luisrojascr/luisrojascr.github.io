@@ -1,0 +1,66 @@
+.footer-cta {
+    color: $white;
+    background: #42305f;
+    padding: 50px 0 30px 0;
+    position: relative;
+    h2 {
+      color: $white;
+    }
+    p {
+      font-weight: 200;
+      font-size: 16px;
+      margin-bottom: 30px;
+      line-height: 1.8em;
+      color: $white;
+    }
+    .contact-form label {
+      color: $white;
+    }
+  }
+  
+  .back-top {
+    background: $brand-secondary;
+    width: 66px;
+    height: 66px;
+    color: $white;
+    position: absolute;
+    bottom: -66px;
+    right: 25px;
+    z-index: 10;
+    border-radius: 100px;
+    font-size: 60px;
+    text-align: center;
+    line-height: 56px;
+    font-weight: 300;
+    transition: box-shadow .3s ease-in-out 0s;
+    box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, 0.5);
+    transition: background 0.3s ease-in-out 0s;
+    &:hover {
+      background: $brand-warning;
+      box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.7);
+      cursor: pointer;
+    }
+  }
+  
+  .footer-links {
+    line-height: 3;
+    margin: 20px 0;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    h4 {
+      color: $white;
+      font-size: 16px;
+      font-weight: 500;
+    }
+    a {
+      color: rgba(255, 255, 255, 0.5);
+      -webkit-transition: color .2s ease-in-out 0s;
+      -moz-transition: color .2s ease-in-out 0s;
+      -o-transition: color .2s ease-in-out 0s;
+      -ms-transition: color .2s ease-in-out 0s;
+      transition: color 0.2s ease-in-out 0s;
+      &:hover {
+        color: $white;
+      }
+    }
+  }
