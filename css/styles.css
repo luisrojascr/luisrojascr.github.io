@@ -1730,6 +1730,9 @@ hr {
   overflow: visible;
   clip: auto; }
 
+.br-4 {
+  border-radius: 4px; }
+
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: inherit;
   font-weight: 500;
@@ -3320,9 +3323,15 @@ textarea.input-lg, select[multiple].input-lg {
   border: 1px solid transparent;
   border-radius: 0;
   cursor: pointer; }
+  .navbar-toggle .fa-th {
+    display: none; }
+  .navbar-toggle.collapsed .fa-times {
+    display: none; }
+  .navbar-toggle.collapsed .fa-th {
+    display: block; }
   .navbar-toggle:focus {
     outline: 0; }
-  .navbar-toggle .fa-th {
+  .navbar-toggle .fa-th, .navbar-toggle .fa-times {
     font-size: 24px; }
 
 .navbar-nav {
@@ -3342,15 +3351,6 @@ textarea.input-lg, select[multiple].input-lg {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
   margin-top: 7px;
   margin-bottom: 7px; }
-
-.navbar-nav > li > .dropdown-menu {
-  margin-top: 0;
-  border-top-right-radius: 0;
-  border-top-left-radius: 0; }
-
-.navbar-fixed-bottom .navbar-nav > li > .dropdown-menu {
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0; }
 
 .navbar-btn {
   margin-top: 7px;
@@ -3766,9 +3766,6 @@ ol.steps-small > li::before {
   font-size: 16px;
   text-align: left;
   background-color: #fff;
-  border: 1px solid graylight;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 0;
   -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   background-clip: padding-box; }
@@ -3819,6 +3816,9 @@ ol.steps-small > li::before {
 .open > a {
   outline: 0; }
 
+.back-arrow {
+  display: none; }
+
 .dropdown-menu-right {
   left: auto;
   right: 0; }
@@ -3850,7 +3850,6 @@ ol.steps-small > li::before {
 .navbar-nav > li > .dropdown-menu {
   width: 340px;
   margin-top: -2px;
-  border-top: 2px solid #ef187a;
   padding: 0; }
   .navbar-nav > li > .dropdown-menu.dropdown-menu-small {
     width: 240px; }
@@ -3862,10 +3861,10 @@ ol.steps-small > li::before {
     margin: 30px 0;
     margin-left: 0;
     margin-right: 0; }
-  .navbar-nav > li > .dropdown-menu.special-dropdown-menu .bg-gray-lightest {
-    padding: 20px 0; }
-  .navbar-nav > li > .dropdown-menu.special-dropdown-menu div.row {
+  .navbar-nav > li > .dropdown-menu.slide-sub-dropdown-menu div.row {
     margin-bottom: 0; }
+  .navbar-nav > li > .dropdown-menu.slide-sub-dropdown-menu .bg-gray-lightest {
+    padding: 20px 0; }
 
 .screen {
   background: rgba(0, 0, 0, 0.65);
@@ -4181,6 +4180,8 @@ ol.steps-small > li::before {
       overflow: visible; }
     .navbar-collapse.in {
       overflow-y: visible; }
+  .ha-header .navbar-default .navbar-nav a.top-link {
+    height: 82px; }
   .navbar-fixed-top .navbar-collapse, .navbar-static-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse {
     padding-left: 0;
     padding-right: 0; }
@@ -4212,6 +4213,20 @@ ol.steps-small > li::before {
     margin-right: 15px; }
     .navbar-text.navbar-right:last-child {
       margin-right: 0; }
+  .navbar-nav > li > .dropdown-menu {
+    left: -115px;
+    margin-top: 10px; }
+    .navbar-nav > li > .dropdown-menu:before {
+      content: '';
+      border-style: solid;
+      border-width: 10px 10px 10px 10px;
+      border-color: transparent transparent #fff transparent;
+      position: absolute;
+      top: -18px;
+      z-index: 2;
+      left: 47%; }
+    .navbar-nav > li > .dropdown-menu.dropdown-menu-small {
+      left: -73px; }
   .dropdown:hover .dropdown-menu {
     display: block; }
   .container-fluid {
@@ -4267,8 +4282,8 @@ ol.steps-small > li::before {
     clear: both; }
     .navbar-collapse.in .main-nav, .collapsing .main-nav {
       background-color: #fff;
-      box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, 0.5);
-      width: 40%;
+      height: calc(100vh - 80px);
+      width: 100%;
       margin: auto;
       padding: 0; }
       .navbar-collapse.in .main-nav a.bottom-line, .collapsing .main-nav a.bottom-line {
@@ -4291,7 +4306,7 @@ ol.steps-small > li::before {
     padding: 0; }
   .navbar-nav > li > .dropdown-menu div.row {
     margin: 0; }
-  .navbar-nav > li > .dropdown-menu.special-dropdown-menu div.row {
+  .navbar-nav > li > .dropdown-menu.slide-sub-dropdown-menu div.row {
     padding: 0; }
   .navbar-nav > li > .dropdown-menu.dropdown-menu-small {
     width: 100%; }
@@ -4318,6 +4333,24 @@ ol.steps-small > li::before {
       height: auto;
       padding-bottom: 0;
       overflow: visible; }
+  .fa-angle-right {
+    color: #8a8a8a; }
+  .dropdown.open .dropdown-toggle {
+    text-align: center; }
+  .dropdown.open .back-arrow {
+    display: block; }
+  .dropdown.open .right-arrow {
+    display: none; }
+  .dropdown.open .slide-sub-dropdown-menu {
+    height: 100vh; }
+  .dropdown.open .mobile-slide-menu {
+    transform: translateX(0%); }
+  .mobile-slide-menu {
+    z-index: 4;
+    left: 0px;
+    transform: translateX(100%);
+    will-change: transform;
+    transition: transform 0.3s ease; }
   .ss-slide img {
     height: 380px;
     width: auto; }
@@ -4504,7 +4537,7 @@ ol.steps-small > li::before {
     float: none;
     width: auto;
     margin-top: 0;
-    background-color: transparent;
+    background-color: #fafafa;
     border: 0;
     box-shadow: none; }
     .navbar-nav .open .dropdown-menu > li > a, .navbar-nav .open .dropdown-menu .dropdown-header {
@@ -4516,10 +4549,7 @@ ol.steps-small > li::before {
   .navbar-right {
     margin-right: 0; }
   .collapsing .main-nav {
-    width: 60%;
     margin: auto; }
-  .navbar-collapse.in .main-nav {
-    width: 60%; }
   .navbar-form .form-group {
     margin-bottom: 5px; }
   .ha-header .navbar-default .navbar-nav a.top-link {
@@ -4629,14 +4659,11 @@ ol.steps-small > li::before {
 @media screen and (max-width: 480px) {
   .navbar-right {
     display: none; }
-  .collapsing .main-nav {
-    width: 90%; }
-  .navbar-collapse.in .main-nav {
-    width: 90%;
-    padding: 0; }
   .item-img {
     width: 90%;
     height: 125px; }
+  .mobile-list {
+    display: none; }
   .duo-text-wrapper .h1-window {
     height: 100px; }
   .duo-text-wrapper .h2-window {

@@ -116,3 +116,17 @@ $(document).ready(function() {
 		window.location= '/company/newsletters/mailing-list-signup?email=' + x;
 	});
 });
+
+$(window).resize(function() {
+	if ($(window).width() < 1200) {
+		$('.mobile-slide-btn').click(function(e) {
+			e.preventDefault();
+			$('.slide-sub-dropdown-menu').addClass('is-second-menu-open');
+		});
+	}
+
+	$('.dropdown-menu').click(function(e) {
+		e.preventDefault();
+		alert('Hey');
+	});
+});
