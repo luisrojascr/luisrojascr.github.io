@@ -127,6 +127,7 @@ $(window).resize(function() {
 
 	$('.dropdown-menu').click(function(e) {
 		e.preventDefault();
-		alert('Hey');
+		$('.dropdown').addClass('open');
+		$('.mobile-list').show();
 	});
 });

@@ -3865,6 +3865,8 @@ ol.steps-small > li::before {
     margin-bottom: 0; }
   .navbar-nav > li > .dropdown-menu.slide-sub-dropdown-menu .bg-gray-lightest {
     padding: 20px 0; }
+  .navbar-nav > li > .dropdown-menu.slide-sub-dropdown-menu .submenu-marketplace {
+    padding-left: 20px; }
 
 .screen {
   background: rgba(0, 0, 0, 0.65);
