@@ -117,17 +117,24 @@ $(document).ready(function() {
 	});
 });
 
-$(window).resize(function() {
-	if ($(window).width() < 1200) {
-		$('.mobile-slide-btn').click(function(e) {
-			e.preventDefault();
-			$('.slide-sub-dropdown-menu').addClass('is-second-menu-open');
-		});
-	}
+// $(window).resize(function() {
+// 	isMobile();
+// });
 
-	$('.dropdown-menu').click(function(e) {
-		e.preventDefault();
-		$('.dropdown').addClass('open'); 
-		$('.mobile-list').show();
+if ($(window).width() < 480) {
+	$('.dropdown-toggle').click(function() {
+		$('.mobile-list').hide();
 	});
-});
+	
+	$('.dropdown').click(function(e) { 
+		e.preventDefault();
+		e.stopPropagation();
+		$(this).toggleClass('open'); 
+	});
+	
+	$('.dropdown-menu h5').click(function(e) {
+		e.preventDefault();
+		e.stopPropagation();
+		$(this).next("ul.mobile-list").toggle();
+	});
+}
