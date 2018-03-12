@@ -23,16 +23,16 @@ html {
 }
 
 
-//
-// Variables
-//
+/*
+    // Variables
+*/
 
 @import "variables";
 @import "normalize";
 
-//
-// Grid mixins
-//
+/*
+    // Grid mixins
+*/
 
 @import "mixins/clearfix";
 @import "mixins/breakpoints";
@@ -49,7 +49,6 @@ html {
 */
 
 @import "fonts";
-@import "glyphicons";
 @import "base";
 @import "buttons";
 @import "forms";
@@ -57,7 +56,6 @@ html {
 @import "menu";
 
 //Sections
-@import "head";
 @import "home";
 @import "footer";
 
