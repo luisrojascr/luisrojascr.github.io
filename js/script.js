@@ -115,8 +115,42 @@ function setDropdownToggle() {
  * Set tabs slides
  */
 function setTabSlides() {
-	$('#panel').width(parseInt($('#mask').width() * $('#panel > div').length));
-	$('#panel > div').width($('#mask').width());
+	var $mask =  $('#mask');
+	var $maskWidth = $('#mask').width();
+	var $whatsNewBodyWidth = $('.whats-new-body').width();
+
+	$('#panel').width(parseInt($maskWidth * $('#panel > div').length));
+	$('#panel > div').width($maskWidth);
+
+	$( window ).resize(function() {
+		if ($(window).width() < 480) { 
+			$whatsNewBodyWidth = '360px';
+			$maskWidth = '360px';
+			$('#panel').width(parseInt($maskWidth * $('#panel > div').length));
+			$('#panel > div').width($maskWidth);
+		}
+		else if ($(window).width() < 768) { 
+			$whatsNewBodyWidth = '430px';
+			$maskWidth = '430px';
+			$('#panel').width(parseInt($maskWidth * $('#panel > div').length));
+			$('#panel > div').width($maskWidth);
+		}
+		else if ($(window).width() < 991) { 
+			$whatsNewBodyWidth = '710px';
+			$maskWidth = '710px';
+			$('#panel').width(parseInt($maskWidth * $('#panel > div').length));
+			$('#panel > div').width($maskWidth);
+		}
+		else if ($(window).width() < 1200) { 
+			$whatsNewBodyWidth = '940px';
+			$maskWidth = '940px';
+			$('#panel').width(parseInt($maskWidth * $('#panel > div').length));
+			$('#panel > div').width($maskWidth);
+		} else {
+			$('#panel').width(parseInt($maskWidth * $('#panel > div').length));
+			$('#panel > div').width($maskWidth);
+		}		
+	});
 	
 	$('a[rel=panel]').click(function (e) {
 		e.preventDefault();
@@ -124,7 +158,7 @@ function setTabSlides() {
 		
 		$('a[rel=panel]').removeClass('selected');
 		$(this).addClass('selected');
-		$('#mask').animate({'height':panelheight},{queue:false, duration:500});			
-		$('#mask').scrollTo($(this).attr('href'), 800);		
+		$mask.animate({'height':panelheight},{queue:false, duration:500});			
+		$mask.scrollTo($(this).attr('href'), 800);		
 	});
 }

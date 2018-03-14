@@ -258,7 +258,7 @@
             font-weight: 100;
             font-size: 21px;
             margin-bottom: 30px;
-            padding: 0 20px;
+            padding: 0;
             line-height: 36px;
         }
 
@@ -340,17 +340,12 @@
     overflow: hidden;
 }
 
-.whats-new {
-    margin-bottom: 60px;
-    
+.whats-new {    
     .whats-new-body {
-        width: 1100px;
         padding-bottom:30px;
     }
     
     #mask {
-        width: 1100px;
-        min-height: 452px;
         overflow:hidden;
         margin:0 auto;
     }
