@@ -2896,11 +2896,10 @@ fieldset[disabled] .navbar-inverse .btn-link:hover, .navbar-inverse .btn-link[di
     line-height: 19px;
     height: 60px;
     overflow: hidden;
-    color: #fff; }
+    color: #292b2c; }
     .ha-header .navbar-default .navbar-nav a.top-link:hover {
       color: #ef187a; }
   .ha-header .navbar-default .navbar-nav a.top-link-btn {
-    background: #fff;
     text-transform: uppercase;
     color: #ef187a;
     border-radius: 3px;
@@ -2910,25 +2909,18 @@ fieldset[disabled] .navbar-inverse .btn-link:hover, .navbar-inverse .btn-link[di
     padding: 0 35px;
     margin-top: 21px;
     font-weight: 500;
-    border: none; }
+    border: none;
+    color: #fff;
+    background-image: linear-gradient(159deg, #c336e5 10%, #ef187a 72%); }
     .ha-header .navbar-default .navbar-nav a.top-link-btn:hover {
-      color: #fff;
-      background-image: linear-gradient(159deg, #c336e5 10%, #ef187a 72%); }
+      background-image: linear-gradient(159deg, #c336e5 10%, #ab1bcd 72%); }
 
 .ha-header-bg {
-  -webkit-box-shadow: 1px 1px 6px 0 rgba(0, 0, 0, 0.5);
-  box-shadow: 1px 1px 6px 0 rgba(0, 0, 0, 0.5);
   background: #fff; }
-  .ha-header-bg .navbar-default .navbar-nav a.top-link-btn {
-    color: #fff;
-    background-image: linear-gradient(159deg, #c336e5 10%, #ef187a 72%);
-    border: 1px solid #c336e5; }
-    .ha-header-bg .navbar-default .navbar-nav a.top-link-btn:hover {
-      background-image: linear-gradient(159deg, #c336e5 10%, #ab1bcd 72%); }
   .ha-header-bg .logo-wrapper {
     background-image: url("../images/dotcms-blk-logo.svg"); }
   .ha-header-bg .navbar-default .navbar-nav a.top-link {
-    color: #8a8a8a; }
+    color: #292b2c; }
   .ha-header-bg .navbar-toggle {
     color: #c336e5; }
 
@@ -3446,21 +3438,29 @@ ol.steps-small > li::before {
     text-rendering: geometricPrecision; }
     .homepage-banner .duo-text-wrapper h1 {
       font-family: 'Roboto',Arial,Helvetica,sans-serif;
-      font-weight: 100;
-      margin-bottom: 0; }
+      font-weight: 600;
+      margin-bottom: 0;
+      font-size: 3.25rem;
+      color: #292b2c; }
     .homepage-banner .duo-text-wrapper h2 {
       font-family: 'Roboto',Arial,Helvetica,sans-serif;
-      font-weight: 100;
-      font-size: 21px;
+      font-weight: 400;
+      font-size: 2.7rem;
       margin-bottom: 30px;
+      margin-top: 8px;
       padding: 0;
-      line-height: 36px; }
+      line-height: 36px;
+      color: #c336e5; }
+    .homepage-banner .duo-text-wrapper p {
+      color: #292b2c;
+      margin-bottom: 30px; }
     .homepage-banner .duo-text-wrapper .btn {
       padding: 15px 35px;
       font-size: 18px;
       cursor: pointer;
       white-space: nowrap;
-      border-radius: 5px; }
+      border-radius: 5px;
+      margin-left: 0; }
   .homepage-banner .bottom-curve {
     background-image: url("/images/curve-purple.svg");
     background-size: 100% auto;
@@ -3472,7 +3472,6 @@ ol.steps-small > li::before {
     bottom: 0; }
 
 .duotone-blue {
-  background: rgba(65, 44, 100, 0.8);
   height: 600px; }
 
 .duo-text-wrapper {

@@ -607,7 +607,7 @@ fieldset[disabled] .navbar-inverse .btn-link:hover, .navbar-inverse .btn-link[di
             line-height: 19px;
             height: 60px;
             overflow: hidden;
-            color: $white;
+            color: $gray-dark;
 
             &:hover {
                 color: $brand-secondary;
@@ -615,7 +615,6 @@ fieldset[disabled] .navbar-inverse .btn-link:hover, .navbar-inverse .btn-link[di
         }
 
         &.top-link-btn {
-            background: $white;
             text-transform: uppercase;
             color: $brand-secondary;
             border-radius: 3px;
@@ -626,36 +625,25 @@ fieldset[disabled] .navbar-inverse .btn-link:hover, .navbar-inverse .btn-link[di
             margin-top: 21px;
             font-weight: 500;
             border: none;
+            color: $white;
+            background-image: linear-gradient(159deg, $brand-primary 10%, $brand-secondary 72%);
 
             &:hover {
-                color: $white;
-                background-image: linear-gradient(159deg, $brand-primary 10%, $brand-secondary 72%);
+                background-image: linear-gradient(159deg, $brand-primary 10%, $brand-hover 72%);
             }
         }
     }
 }
 
 .ha-header-bg {
-    -webkit-box-shadow: 1px 1px 6px 0 rgba(0, 0, 0, 0.5);
-    box-shadow: 1px 1px 6px 0 rgba(0, 0, 0, 0.5);
     background: $white;
-
-    .navbar-default .navbar-nav a.top-link-btn {
-        color: $white;
-        background-image: linear-gradient(159deg, $brand-primary 10%, $brand-secondary 72%);
-        border: 1px solid $brand-primary;
-
-        &:hover {
-            background-image: linear-gradient(159deg, $brand-primary 10%, $brand-hover 72%);
-        }
-    }
 
     .logo-wrapper {
         background-image: url("../images/dotcms-blk-logo.svg");
     }
 
     .navbar-default .navbar-nav a.top-link {
-        color: $gray;
+        color: $gray-dark;
     }
 
     .navbar-toggle {
